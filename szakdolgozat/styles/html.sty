@@ -1,0 +1,202 @@
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+
+\usepackage{listings}
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\definecolor{framecolor}{rgb}{0.85,0.85,0.85}
+
+\lstdefinelanguage{CSS}{
+  morekeywords={accelerator,azimuth,background,background-attachment,
+    background-color,background-image,background-position,
+    background-position-x,background-position-y,background-repeat,
+    behavior,border,border-bottom,border-bottom-color,
+    border-bottom-style,border-bottom-width,border-collapse,
+    border-color,border-left,border-left-color,border-left-style,
+    border-left-width,border-right,border-right-color,
+    border-right-style,border-right-width,border-spacing,
+    border-style,border-top,border-top-color,border-top-style,
+    border-top-width,border-width,bottom,caption-side,clear,
+    clip,color,content,counter-increment,counter-reset,cue,
+    cue-after,cue-before,cursor,direction,display,elevation,
+    empty-cells,filter,float,font,font-family,font-size,
+    font-size-adjust,font-stretch,font-style,font-variant,
+    font-weight,height,ime-mode,include-source,
+    layer-background-color,layer-background-image,layout-flow,
+    layout-grid,layout-grid-char,layout-grid-char-spacing,
+    layout-grid-line,layout-grid-mode,layout-grid-type,left,
+    letter-spacing,line-break,line-height,list-style,
+    list-style-image,list-style-position,list-style-type,margin,
+    margin-bottom,margin-left,margin-right,margin-top,
+    marker-offset,marks,max-height,max-width,min-height,
+    min-width,-moz-binding,-moz-border-radius,
+    -moz-border-radius-topleft,-moz-border-radius-topright,
+    -moz-border-radius-bottomright,-moz-border-radius-bottomleft,
+    -moz-border-top-colors,-moz-border-right-colors,
+    -moz-border-bottom-colors,-moz-border-left-colors,-moz-opacity,
+    -moz-outline,-moz-outline-color,-moz-outline-style,
+    -moz-outline-width,-moz-user-focus,-moz-user-input,
+    -moz-user-modify,-moz-user-select,orphans,outline,
+    outline-color,outline-style,outline-width,overflow,
+    overflow-X,overflow-Y,padding,padding-bottom,padding-left,
+    padding-right,padding-top,page,page-break-after,
+    page-break-before,page-break-inside,pause,pause-after,
+    pause-before,pitch,pitch-range,play-during,position,quotes,
+    -replace,richness,right,ruby-align,ruby-overhang,
+    ruby-position,-set-link-source,size,speak,speak-header,
+    speak-numeral,speak-punctuation,speech-rate,stress,
+    scrollbar-arrow-color,scrollbar-base-color,
+    scrollbar-dark-shadow-color,scrollbar-face-color,
+    scrollbar-highlight-color,scrollbar-shadow-color,
+    scrollbar-3d-light-color,scrollbar-track-color,table-layout,
+    text-align,text-align-last,text-decoration,text-indent,
+    text-justify,text-overflow,text-shadow,text-transform,
+    text-autospace,text-kashida-space,text-underline-position,top,
+    unicode-bidi,-use-link-source,vertical-align,visibility,
+    voice-family,volume,white-space,widows,width,word-break,
+    word-spacing,word-wrap,writing-mode,z-index,zoom},
+  morestring=[s]{:}{;},
+  sensitive,
+  morecomment=[s]{/*}{*/}
+}
+
+\lstdefinelanguage{JavaScript}{
+  morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+\lstdefinelanguage{HTML5}{
+  language=HTML,
+  sensitive=true,	
+  alsoletter={<>=-},	
+  morecomment=[s]{<!-}{-->},
+  morestring=[b]https,
+  tag=[s],
+  otherkeywords={
+	  % General
+	  >,
+	  % Standard tags
+		<!DOCTYPE,
+	  </html, <html, <head, <style, </style, <link, </head, <meta, />,
+		% body
+		</body, <body,
+		% Divs
+		</div, <div, </div>, 
+		% Paragraphs
+		</p, <p, </p>,
+		% scripts
+		</script, <script,
+	  % More tags...
+	  <canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article, <button, </button, <h1, </h1, <title, </title, <h2, </h2
+  },
+  ndkeywords={
+	% General
+	=,
+	% HTML attributes
+	accept=, accept-charset=, accesskey=, action=, align=, alt=, async=, autocomplete=, autofocus=, autoplay=, autosave=, bgcolor=, border=, buffered=, challenge=, charset=, checked=, cite=, class=, code=, codebase=, color=, cols=, colspan=, content=, contenteditable=, contextmenu=, controls=, coords=, data=, datetime=, default=, defer=, dir=, dirname=, disabled=, download=, draggable=, dropzone=, enctype=, for=, form=, formaction=, headers=, height=, hidden=, high=, href=, hreflang=, http-equiv=, icon=, id=, ismap=, itemprop=, keytype=, kind=, label=, lang=, language=, list=, loop=, low=, manifest=, max=, maxlength=, media=, method=, min=, multiple=, name=, novalidate=, open=, optimum=, pattern=, ping=, placeholder=, poster=, preload=, pubdate=, radiogroup=, readonly=, rel=, required=, reversed=, rows=, rowspan=, sandbox=, scope=, scoped=, seamless=, selected=, shape=, size=, sizes=, span=, spellcheck=, src=, srcdoc=, srclang=, start=, step=, style=, summary=, tabindex=, target=, type=, usemap=, value=, width=, wrap=,
+	% CSS properties
+	accelerator:,azimuth:,background:,background-attachment:,
+	background-color:,background-image:,background-position:,
+	background-position-x:,background-position-y:,background-repeat:,
+	behavior:,border:,border-bottom:,border-bottom-color:,
+	border-bottom-style:,border-bottom-width:,border-collapse:,
+	border-color:,border-left:,border-left-color:,border-left-style:,
+	border-left-width:,border-right:,border-right-color:,
+	border-right-style:,border-right-width:,border-spacing:,
+	border-style:,border-top:,border-top-color:,border-top-style:,
+	border-top-width:,border-width:,bottom:,caption-side:,clear:,
+	clip:,color:,content:,counter-increment:,counter-reset:,cue:,
+	cue-after:,cue-before:,cursor:,direction:,display:,elevation:,
+	empty-cells:,filter:,float:,font:,font-family:,font-size:,
+	font-size-adjust:,font-stretch:,font-style:,font-variant:,
+	font-weight:,height:,ime-mode:,include-source:,
+	layer-background-color:,layer-background-image:,layout-flow:,
+	layout-grid:,layout-grid-char:,layout-grid-char-spacing:,
+	layout-grid-line:,layout-grid-mode:,layout-grid-type:,left:,
+	letter-spacing:,line-break:,line-height:,list-style:,
+	list-style-image:,list-style-position:,list-style-type:,margin:,
+	margin-bottom:,margin-left:,margin-right:,margin-top:,
+	marker-offset:,marks:,max-height:,max-width:,min-height:,
+	min-width:,transition-duration:,transition-property:,
+	transition-timing-function:,transform:,
+	-moz-transform:,-moz-binding:,-moz-border-radius:,
+	-moz-border-radius-topleft:,-moz-border-radius-topright:,
+	-moz-border-radius-bottomright:,-moz-border-radius-bottomleft:,
+	-moz-border-top-colors:,-moz-border-right-colors:,
+	-moz-border-bottom-colors:,-moz-border-left-colors:,-moz-opacity:,
+	-moz-outline:,-moz-outline-color:,-moz-outline-style:,
+	-moz-outline-width:,-moz-user-focus:,-moz-user-input:,
+	-moz-user-modify:,-moz-user-select:,orphans:,outline:,
+	outline-color:,outline-style:,outline-width:,overflow:,
+	overflow-X:,overflow-Y:,padding:,padding-bottom:,padding-left:,
+	padding-right:,padding-top:,page:,page-break-after:,
+	page-break-before:,page-break-inside:,pause:,pause-after:,
+	pause-before:,pitch:,pitch-range:,play-during:,position:,quotes:,
+	-replace:,richness:,right:,ruby-align:,ruby-overhang:,
+	ruby-position:,-set-link-source:,size:,speak:,speak-header:,
+	speak-numeral:,speak-punctuation:,speech-rate:,stress:,
+	scrollbar-arrow-color:,scrollbar-base-color:,
+	scrollbar-dark-shadow-color:,scrollbar-face-color:,
+	scrollbar-highlight-color:,scrollbar-shadow-color:,
+	scrollbar-3d-light-color:,scrollbar-track-color:,table-layout:,
+	text-align:,text-align-last:,text-decoration:,text-indent:,
+	text-justify:,text-overflow:,text-shadow:,text-transform:,
+	text-autospace:,text-kashida-space:,text-underline-position:,top:,
+	unicode-bidi:,-use-link-source:,vertical-align:,visibility:,
+	voice-family:,volume:,white-space:,widows:,width:,word-break:,
+	word-spacing:,word-wrap:,writing-mode:,z-index:,zoom:
+	}
+}
+
+
+% C++ style for highlighting
+\newcommand\htmlstyle{\lstset{
+language=HTML5,
+alsolanguage=CSS,
+alsodigit={.:;-},
+basicstyle=\ttm,
+backgroundcolor=\color{codebg},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+deletekeywords={title},
+%ndkeywordstyle=\color{deepgreen}\bfseries,
+frame=single,                         % Any extra options here
+frameround=tttt,
+showstringspaces=false,            % 
+% numbers=left,
+% numberstyle=\color{gray},
+framesep=6pt,
+rulecolor=\color{framecolor},
+numbersep=16pt
+}}
+
+% C++ environment
+\lstnewenvironment{HTML5}[1][]
+{
+\htmlstyle
+\lstset{#1}
+}
+{}
+
+% C++ for external files
+\newcommand\htmlexternal[2][]{{
+\htmlstyle
+\lstinputlisting[#1]{#2}}}
+
+% C++ for inline
+\newcommand\htmlinline[1]{{\pythonstyle\lstinline!#1!}}
+
+\NewDocumentCommand{\codeword}{v}{%
+{\ttb{\color{deepblue}{#1}}}%
+}

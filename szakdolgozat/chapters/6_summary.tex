@@ -1,0 +1,12 @@
+\Chapter{Összefoglalás}
+A kutatásom során egy új témával ismerkedhettem meg, mely eddig ismeretlen volt számomra. A szakdolgozatomban bemutatásra került, hogy a technikai analízis felhasználható automatikus kereskedő szoftver készítésére. A bemutatott példa egy lehetőség, azonban ez egy annyira komplex probléma, mely további kutatást igényel, amennyiben még jobb eredmények elérése a cél.
+
+A dolgozat készítése során az első probléma az volt, hogy milyen adatok kerüljenek felhasználásra, honnan tölthetem le őket. Az általam használt Alpha Vantage oldal jó választásnak bizonyult, azonban kizárólag két évre visszamenőleg lehet a napi adatokat letölteni. Ez némileg nehezítheti a következtetés levonását, viszont így is több százezer rekordos adatbázisokkal dolgoztam, mely elegendőnek bizonyult.
+
+A szakdolgozatom elkészítéséhez két programot készítettem el. Azért döntöttem így, mert a webes felületet egyszerűnek gondoltam, és több eszközről érhető el. Viszont szükség volt egy adatletöltő alkalmazásra, amit Java nyelven írtam meg. Így a két rendszer nem használja el az erőforrást egymástól, a letöltés nem függ a weboldaltól, illetve a letöltés az egy lassabb folyamat. Míg az tart, nyugodtan nézegethetőek az eddig letöltött részvények.
+
+A program által felhasznált statisztikák a kereskedők ajánlásai alapján kerültek kiválasztásra. Összesen 11 darab feltételt alkalmaztam a kereskedés eldöntéséhez. Egy további kutatás témájaként a több ezer indikátor közül érdemes lehet több másik indikátort kipróbálni, hogyan viselkednek az adott környezetben. A feltételeket súlyozással láttam el, és a genetikus algoritmus dönti el egy részvény alapján, hogy milyen súlyokat kapjon. Ezeket a súlyokat a többi részvényre is lehet használni, választástól függően jobb, rosszabb eredményt ér el.
+
+A szoftver megjelenítési mechanizmusa véleményem szerint a gyengepontja a dolgozatomnak, hiszen erőforrásigényessége miatt lassabb számítógépeken nehezebb lehet a használata. Kicsit gyorsabbá lehet tenni, ha a megjelenítést leveszi a felhasználó a mozgatás erejéig.
+
+Összességében az elkészített program megoldotta a kitűzött célt, és sikerült egy nyereséges kereskedő automatát elkészíteni genetikus algoritmus segítségével. A méréseim alapján azt tudom elmondani, hogy a vizsgált részvényeken 83.7\%-ban sikerült profitot termelnie a programnak. A feltételek bővítésével elképzelhető, hogy ez növelhető, azonban ha egy létező rendszerbe integrálásra kerülne bővítményként az algoritmusom, úgy gondolom hosszútávon még jobb számot érne el. 

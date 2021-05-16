@@ -1,0 +1,16 @@
+body{
+	/*text-align: center;*/
+}
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+#indicators {
+    width: 100%;
+    height: 500px;
+}
+
+.paragraphs {
+    background-color: yellow;
+}
+
